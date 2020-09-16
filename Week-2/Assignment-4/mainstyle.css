@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ececec;
+    
+}
+
+.navbar-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.navbar-logo, .navbar-item {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    display:flex;
+    padding: 1.2em;
+}
+
+
+.logo {
+    width: 80px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.WebTopic {
+    text-align: center;
+    background-color: #ccdcec;
+    padding: 50px;
+}
+
+.WebMain {
+    display: flex;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.Main{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.boxitem{
+    display: flex;
+    background-color: #8b9aab;
+    /*align-items: center;*/
+    justify-content: center;
+    height: 120px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 50%;
+    width: 50%;
+    min-height: 1px;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+#HideBoxex {
+    display: none;
+}
+
+
+.MainBtn {
+    background-color: #dcecfc;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    border:none;
+}
+
+
+@media (min-width: 769px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar-logo {
+        margin: 0;
+        padding: 0;
+    }
+}
+
