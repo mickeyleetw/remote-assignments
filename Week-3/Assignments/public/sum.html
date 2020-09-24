@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week-3 Assignment-3</title>
+</head>
+<body>
+    <h1 id="total"></h1>
+        <input type="number" id="numipt" value="Enter a Number">
+        <button type="button" onclick="CountSum()">Get Summation</button>
+
+    <script>
+        function CountSum() {
+            const numipt = document.getElementById("numipt").value;
+            const url = `/getData?number=${numipt}`;
+
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4) {
+                    if (xhr.status === 200) {
+                        document.getElementById("total").innerHTML = xhr.responseText;
+                    } else {
+                        alert('There was a problem with the request.');
+                    }
+                }
+            }
+            xhr.open("GET", url,true);
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>
+

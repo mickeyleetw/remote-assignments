@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+    head
+        title Week-3 Assignment-4
+    body
+        if name
+          h1= name
+        else
+          form(action="/trackName" method="get")
+            label Please Enter your Name: 
+            input(type='text' name='name' placeholder='Your Name here') 
+            //name send back to server with page trackname'
+            input(type='submit' value='Submit')
+
