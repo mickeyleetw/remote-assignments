@@ -1,0 +1,29 @@
+doctype html
+head
+  title Week 4  Assignment 3
+body
+  if msg
+    h1= msg
+  .signup
+    h2 Sign Up
+    form(action='/signup' method='POST')
+      .form-comp
+        label(for='email') Email: 
+        input#email(type='email' name='email' required='')
+      .form-comp
+        label(for='password') Password: 
+        input#password(type='password' name='password' required='')
+      .form-comp
+        input(type='submit' value='Sign Up')
+  .signin
+    h2 Sign In
+    form(action='/signin' method='POST')
+      .form-comp
+        label(for='email') Email: 
+        input#email(type='email' name='email' required='')
+      .form-comp
+        label(for='password') Password: 
+        input#password(type='password' name='password' required='')
+      .form-comp
+        input(type='submit' value='Login')
+script(src='main.js')
